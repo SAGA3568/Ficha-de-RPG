@@ -1,0 +1,198 @@
+body{
+    background-image: url(..//img/Dungeon.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#corpo{
+       width:1200px ;
+       height: 0 auto;
+       margin: 0 auto; 
+}
+#Ap{
+    width: 1200px;
+    height: 50px;
+    background-image: url(../img/ap.jpg);
+    margin-bottom: 5px;
+    border-radius: 3%;
+}
+#Ap h1{
+    color: maroon;
+    text-align: center;
+    font-size: 45px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#cab{
+    width:1200px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+#cab img{
+    width: 1200px;
+    height: 400px;
+    border-radius: 5px;
+    position: absolute;
+    opacity: 0;
+}
+#cab img#slide{
+    opacity: 1;
+}
+
+#escolha{
+    width: 1200px;
+    height: 50px;
+    background-color:rgb(200, 200, 200, 0.1);
+
+}
+
+#escolha h2{
+    color: maroon;
+    text-align: center;
+    font-size: 34px;
+}
+
+#selecao{
+    width: 100%;
+    height: 0 auto;
+    margin: 0 auto;
+}
+
+#hero0{
+    width: 350px;
+    height: 400px;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 40px;
+    float: left;
+}
+
+#hero0 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+}
+
+#hero0 a{
+    font-size: 30px;
+    margin-left: 120px;
+    color:rgb(49, 14, 8) ;
+    font-family:fantasy;
+    text-transform: uppercase;
+}
+
+#hero1{
+    width: 350px;
+    height: 400px;
+    margin-top: 10px;
+    margin-right: 40px;
+    float: left;
+}
+
+#hero1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+}
+
+#hero1 a{
+    font-size: 30px;
+    margin-left: 120px;
+    color:rgb(17, 124, 124);
+    font-family:fantasy;
+    text-transform: uppercase;   
+}
+
+#hero2{
+    width: 350px;
+    height: 400px;
+    margin-top: 10px;
+    float: left;
+}
+
+#hero2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+}
+
+#hero2 a{
+    font-size: 30px;
+    margin-left: 120px;
+    color:rgb(35, 36, 36);
+    font-family:fantasy;
+    text-transform: uppercase;  
+}
+
+#hero3{
+    width: 350px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 40px;
+    float: left;
+}
+
+#hero3 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+}
+
+#hero3 a{
+    font-size: 30px;
+    margin-left: 120px;
+    color:rgb(226, 223, 223) ;
+    font-family:fantasy;
+    text-transform: uppercase;
+}
+
+#hero4{
+    width: 350px;
+    height: 400px;
+    margin-top: 50px;
+    margin-right: 40px;
+    float: left;
+}
+
+#hero4 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+}
+
+#hero4 a{
+    font-size: 30px;
+    margin-left: 120px;
+    color:rgb(15, 87, 57);
+    font-family:fantasy;
+    text-transform: uppercase;   
+}
+
+#hero5{
+    width: 350px;
+    height: 400px;
+    margin-top: 50px;    
+    float: left;
+}
+
+#hero5 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+}
+
+#hero5 a{
+    font-size: 30px;
+    margin-left: 120px;
+    color:rgb(31, 72, 119);
+    font-family:fantasy;
+    text-transform: uppercase;  
+}
+
+#rodape{
+    margin-top: 60px;
+    color: maroon;
+	float: left;
+	width: 100%;
+	text-align: center;
+}
