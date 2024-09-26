@@ -1,213 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Mago</title>
-    <link rel="stylesheet" href="../CSS/Mago.css">
-</head>
-<body>
-    <div id="corpo">
-        <div id="cap">
-            <h1>MAGO</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=MedievalSharp&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/mago.css" />
+    <link rel="stylesheet" href="../css/hero.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="container-title">
+          <h1>MAGO</h1>
         </div>
-        <div id="perfil">
-            <img src="../img/Mago.jpeg" alt="alterar" id="mago">
-        </div>
+      </header>
 
-        <div id="Car">
-            
+      <main>
+        <div id="profile">
+          <img src="../img/Mago.jpeg" height="heighterar" id="mago" />
+          <div id="other-profile">
+            <div class="image-profile">
+              <img src="../img/Raças Mago/Homem.jpeg" onclick="Homem()" />
+              <input type="button" value="Homem" onclick="Homem()" />
+            </div>
+            <div class="image-profile">
+              <img src="../img/Raças Mago/Mulher.jpeg" onclick="Mulher()" />
+              <input type="button" value="Mulher" onclick="Mulher()" />
+            </div>
+            <div class="image-profile">
+              <img src="../img/Raças Mago/Elfo.jpeg" onclick="Elfo()" />
+              <input type="button" value="Elfo" onclick="Elfo()" />
+            </div>
+            <div class="image-profile">
+              <img src="../img/Raças Mago/Elfa.jpeg" onclick="Elfa()" />
+              <input type="button" value="Elfa" onclick="Elfa()" />
+            </div>
+            <div class="image-profile">
+              <img src="../img/Raças Mago/Gnomo.jpeg" onclick="Gnomo()" />
+              <input type="button" value="Gnomo" onclick="Gnomo()" />
+            </div>
+            <div class="image-profile">
+              <img src="../img/Raças Mago/Gnoma.jpeg" onclick="Gnoma()" />
+              <input type="button" value="Gnoma" onclick="Gnoma()" />
+            </div>
+            <div class="image-profile">
+              <img src="../img/Raças Mago/Meio-Orc.jpeg" onclick="MeioOrc()" />
+              <input type="button" value="Meio-Orc" onclick="MeioOrc()" />
+            </div>
+            <div class="image-profile">
+              <img src="../img/Raças Mago/Meia-Orc.jpeg" onclick="MeiaOrc()" />
+              <input type="button" value="Meia-Orc" onclick="MeiaOrc()" />
+            </div>
+          </div>
+        </div>
+        <form action="Magico" method="get" id="container-form">
+          <div class="character">
             <fieldset>
-            <legend>Ficha de Personagem</legend>
-            <form action="Magico" method="get" >
-                <div class="big">
-                    <label for="nome">Nome</label>
-                    <input type="text"  name="nome" id="nome">
-                </div>
+              <legend>Ficha de Personagem</legend>
 
-                    <label id="idd">Idade</label>
-                    <input type="number" name="idade" id="idade">
+              <div class="name">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" />
+              </div>
 
-                    <label id="Raca">Raça</label>
-                    <select name="raca" id="raca">
-                        <option value="H">Humano</option>
-                        <option value="E">Elfos</option>
-                        <option value="Gn">Gnomo</option>
-                        <option value="MO">Meio-Orc</option>
-                    </select>
+              <label for="age">Idade</label>
+              <input type="number" name="age" id="age" />
 
-                    <label id="Alt">Altura</label>
-                    <input type="number" name="alt" id="alt">
+              <label for="Raca">Raça</label>
+              <select name="raca" id="raca">
+                <option value="H">Humano</option>
+                <option value="E">Elfos</option>
+                <option value="Gn">Gnomo</option>
+                <option value="MO">Meio-Orc</option>
+              </select>
 
-                    <label id="sx">Sexo</label>
-                    <select name="sexo" id="sexo">
-                        <option value="M">Masculino</option>
-                        <option value="F">Feminino</option>
-                        <option value="H">Metamorfo</option>
-                    </select> 
-                    <label id="peso">Peso</label>
-                    <input type="number" name="pe" id="pe">
-                    
-                    <button type="submit" onclick="exito()">Confirmar</button>
+              <label for="height">Altura</label>
+              <input type="number" name="height" id="height" />
 
+              <label for="genre">Sexo</label>
+              <select name="genre" id="genre">
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+                <option value="H">Metamorfo</option>
+              </select>
+              <label for="weight">Peso</label>
+              <input type="number" name="weight" id="weight" />
             </fieldset>
+          </div>
+          <div id="container-attributes">
+            <fieldset>
+              <legend>Atributos</legend>
+              <div class="attributes">
+                <label for="Forca">Força</label>
+                <input type="number" name="for" id="for" />
+              </div>
+              <div class="attributes">
+                <label for="inteligencia">Inteligência</label>
+                <input type="number" name="int" id="int" />
+              </div>
+              <div class="attributes">
+                <label for="resistencia">Resistência</label>
+                <input type="number" name="res" id="res" />
+              </div>
+              <div class="attributes">
+                <label for="carisma">Carisma</label>
+                <input type="number" name="cas" id="cas" />
+              </div>
+              <div class="attributes">
+                <label for="reflexos">Reflexos</label>
+                <input type="number" name="ref" id="ref" />
+              </div>
+              <div class="attributes">
+                <label for="destreza">Destreza</label>
+                <input type="number" name="des" id="des" />
+              </div>
+            </fieldset>
+          </div>
 
-            <div id="especial">
-                <fieldset>
-                    <legend>Atributos</legend>
-                <div class="atr">
-                    <label for="Forca">Força</label>
-                    <input type="number" name="for" id="for">
-                </div>
-                <div class="atr">
-                    <label for="inteligencia">Inteligência</label>
-                    <input type="number" name="int" id="int">
-                </div>
-                <div class="atr">
-                    <label for="resistencia">Resistência</label>
-                    <input type="number" name="res" id="res">
-                </div>
-                <div class="atr">
-                    <label for="carisma">Carisma</label>
-                    <input type="number" name="cas" id="cas">
-                </div>
-                <div class="atr">
-                    <label for="reflexos">Reflexos</label>
-                    <input type="number" name="ref" id="ref">
-                </div>
-                <div class="atr">
-                    <label for="destreza">Destreza</label>
-                    <input type="number" name="des" id="des">
-                </div>
-                </fieldset>
-                    
-            </div>
+          <div id="container-history">
+            <fieldset>
+              <legend>História do Personagem</legend>
+              <div class="hist">
+                <label for="his"></label>
+                <textarea name="his" id="his"></textarea>
+              </div>
+            </fieldset>
+          </div>
 
-            <div id="lore">
-                <fieldset>
-                    <legend>História do Personagem</legend>
-                    <div class="hist">
-                        <label for="his"></label>
-                        <input type="text" name="his" id="his">
-                    </div>
-                </fieldset>
-            </div>
-
-            <div id="stts">
-                <fieldset>
-                    <legend>Status</legend>
-                    <div class="vida">
-                        <label for="hp">PV</label>
-                        <input type="number" name="hp" id="hp">
-                    </div>
-                    <div class="magic">
-                        <label for="magia">Magia</label>
-                        <input type="number" name="ma" id="ma">
-                    </div>
-                    <div class="lesao">
-                        <label for="sagramento">Sangramento</label>
-                        <input type="checkbox" name="sague" id="sague">
-                    </div>
-                    <div class="venom">
-                        <label for="poison">Envenenado</label>
-                        <input type="checkbox" name="poison" id="poison">
-                    </div>
-                </fieldset>
-            </div>
-            <div id="Item">
-                <fieldset>
-                    <legend>Equipamentos</legend>
-                    <div class="armor">
-                        <label for="equip">Item</label>
-                        <input type="text" name="arma1" id="arma1">
-                    </div>
-                    <div class="efeito">
-                        <label for="ele">Efeito</label>
-                    <select name="ele" id="ele">
-                        <option value="n">Nenhum</option>
-                        <option value="F">Fogo</option>
-                        <option value="A">Água</option>
-                        <option value="T">Terra</option>
-                        <option value="V">Veneno</option>
-                        <option value="S">Sagramento</option>
-                        <option value="M">Medo</option>
-                        <option value="C">Cura</option>
-                    </select>
-                    </div>  
-                    <div class="armor">
-                        <label for="equip">Item</label>
-                        <input type="text" name="arma1" id="arma1">
-                    </div>
-                    <div class="efeito">
-                        <label for="ele">Efeito</label>
-                    <select name="ele" id="ele">
-                        <option value="n">Nenhum</option>
-                        <option value="F">Fogo</option>
-                        <option value="A">Água</option>
-                        <option value="T">Terra</option>
-                        <option value="V">Veneno</option>
-                        <option value="S">Sagramento</option>
-                        <option value="M">Medo</option>
-                        <option value="C">Cura</option>
-                    </select>
-                    </div> 
-                    <div class="armor">
-                        <label for="equip">Item</label>
-                        <input type="text" name="arma1" id="arma1">
-                    </div>
-                    <div class="efeito">
-                        <label for="ele">Efeito</label>
-                    <select name="ele" id="ele">
-                        <option value="n">Nenhum</option>
-                        <option value="F">Fogo</option>
-                        <option value="A">Água</option>
-                        <option value="T">Terra</option>
-                        <option value="V">Veneno</option>
-                        <option value="S">Sagramento</option>
-                        <option value="M">Medo</option>
-                        <option value="C">Cura</option>
-                    </select>
-                    </div>   
-                </fieldset>
-            </div>
-            </form>
-
-        </div>
-        <div id="fots">
-            <div class="foto1">
-                <img src="../img/Raças Mago/Homem.jpeg" onclick="Homem()">
-                <input type="button" value="Homem" onclick="Homem()">
-            </div>
-            <div class="foto1">
-                <img src="../img/Raças Mago/Mulher.jpeg" onclick="Mulher()">
-                <input type="button" value="Mulher" onclick="Mulher()">
-            </div>
-            <div class="foto1">
-                <img src="../img/Raças Mago/Elfo.jpeg" onclick="Elfo()">
-                <input type="button" value="Elfo" onclick="Elfo()"> 
-            </div>
-            <div class="foto1">
-                <img src="../img/Raças Mago/Elfa.jpeg" onclick="Elfa()">
-                <input type="button" value="Elfa" onclick="Elfa()">
-            </div>
-            <div class="foto2">
-                <img src="../img/Raças Mago/Gnomo.jpeg" onclick="Gnomo()">
-                <input type="button" value="Gnomo" onclick="Gnomo()">
-            </div>
-            <div class="foto2">
-                <img src="../img/Raças Mago/Gnoma.jpeg" onclick="Gnoma()">
-                <input type="button" value="Gnoma" onclick="Gnoma()">
-            </div>
-            <div class="foto2">
-                <img src="../img/Raças Mago/Meio-Orc.jpeg" onclick="MeioOrc()">
-                <input type="button" value="Meio-Orc" onclick="MeioOrc()">
-            </div>
-            <div class="foto2">
-                <img src="../img/Raças Mago/Meia-Orc.jpeg" onclick="MeiaOrc()">
-                <input type="button" value="Meia-Orc" onclick="MeiaOrc()">
-            </div>
-
-        </div>
+          <div id="status">
+            <fieldset>
+              <legend>Status</legend>
+              <div class="life">
+                <label for="hp">PV</label>
+                <input type="number" name="hp" id="hp" />
+              </div>
+              <div class="magic">
+                <label for="magia">Magia</label>
+                <input type="number" name="ma" id="ma" />
+              </div>
+              <div class="injury">
+                <label for="sagramento">Sangramento</label>
+                <input type="checkbox" name="sague" id="sague" />
+              </div>
+              <div class="venom">
+                <label for="poison">Envenenado</label>
+                <input type="checkbox" name="poison" id="poison" />
+              </div>
+            </fieldset>
+          </div>
+          <div id="item">
+            <fieldset>
+              <legend>Equipamentos</legend>
+              <div class="armor">
+                <label for="equip">Item</label>
+                <input type="text" name="arma1" id="arma1" />
+              </div>
+              <div class="efeito">
+                <label for="ele">Efeito</label>
+                <select name="ele" id="ele">
+                  <option value="n">Nenhum</option>
+                  <option value="F">Fogo</option>
+                  <option value="A">Água</option>
+                  <option value="T">Terra</option>
+                  <option value="V">Veneno</option>
+                  <option value="S">Sagramento</option>
+                  <option value="M">Medo</option>
+                  <option value="C">Cura</option>
+                </select>
+              </div>
+              <div class="armor">
+                <label for="equip">Item</label>
+                <input type="text" name="arma1" id="arma1" />
+              </div>
+              <div class="efeito">
+                <label for="ele">Efeito</label>
+                <select name="ele" id="ele">
+                  <option value="n">Nenhum</option>
+                  <option value="F">Fogo</option>
+                  <option value="A">Água</option>
+                  <option value="T">Terra</option>
+                  <option value="V">Veneno</option>
+                  <option value="S">Sagramento</option>
+                  <option value="M">Medo</option>
+                  <option value="C">Cura</option>
+                </select>
+              </div>
+              <div class="armor">
+                <label for="equip">Item</label>
+                <input type="text" name="arma1" id="arma1" />
+              </div>
+              <div class="efeito">
+                <label for="ele">Efeito</label>
+                <select name="ele" id="ele">
+                  <option value="n">Nenhum</option>
+                  <option value="F">Fogo</option>
+                  <option value="A">Água</option>
+                  <option value="T">Terra</option>
+                  <option value="V">Veneno</option>
+                  <option value="S">Sagramento</option>
+                  <option value="M">Medo</option>
+                  <option value="C">Cura</option>
+                </select>
+              </div>
+            </fieldset>
+          </div>
+          <button type="submit" onclick="exito()">Confirmar</button>
+        </form>
+      </main>
     </div>
-    <script type="text/javascript"  src="../JS/Mago.js"></script>
-</body>
+    <script type="text/javascript" src="../JS/Mago.js"></script>
+  </body>
 </html>
