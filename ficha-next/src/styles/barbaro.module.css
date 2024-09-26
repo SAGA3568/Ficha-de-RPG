@@ -1,0 +1,12 @@
+.wrapper {
+  background-image: url(/img/fundo-barbaro.jpg);
+}
+
+.containerTitle h1,
+.container legend {
+  color: rgb(61, 28, 28);
+}
+
+.attributes label {
+  background-color: rgb(61, 28, 28);
+}

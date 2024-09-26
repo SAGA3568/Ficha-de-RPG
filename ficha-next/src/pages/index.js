@@ -57,25 +57,25 @@ export default function Home() {
 
             <div className={styles.containerSelection}>
               <div className={`${styles.hero} ${styles.hero0}`}>
-                <Link href="pg/barbaro.html">
+                <Link href="personagem/barbaro">
                   <img src="img/Barbaro.jpeg" />
                   <span>Barbaro</span>
                 </Link>
               </div>
               <div className={`${styles.hero} ${styles.hero1}`}>
-                <Link href="pg/mago.html">
+                <Link href="personagem/mago">
                   <img src="img/Mago.jpeg" />
                   <span>Mago</span>
                 </Link>
               </div>
               <div className={`${styles.hero} ${styles.hero2}`}>
-                <Link href="pg/ladino.html">
+                <Link href="personagem/ladino">
                   <img src="img/Ladino.jpeg" height="" />
                   <span>Ladino</span>
                 </Link>
               </div>
               <div className={`${styles.hero} ${styles.hero3}`}>
-                <Link href="pg/paladino.html">
+                <Link href="personagem/paladino">
                   <img src="img/Paladino.jpeg" height="" />
                   <span>Paladino</span>
                 </Link>
