@@ -1,0 +1,175 @@
+.wrapper {
+  background-image: url(/img/Dungeon.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 100vw !important;
+  min-height: 100vh;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header,
+.main,
+.footer {
+  width: 100%;
+}
+
+/* Header */
+
+.header .containerTitle {
+  width: 100%;
+  height: 70px;
+  background-image: url(/img/ap.jpg);
+  margin-bottom: 5px;
+  border-radius: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .containerTitle h1 {
+  color: white;
+  text-align: center;
+  font-size: 45px;
+}
+
+.header .containerSlide {
+  width: 100%;
+  height: 600px;
+  border-radius: 5px;
+}
+
+.header .containerSlide img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 5px;
+
+  opacity: 0;
+}
+
+.header .containerSlide img.slide {
+  opacity: 1;
+}
+/* End header */
+
+/* Main */
+.main .containerSubtitle {
+  margin-top: 2rem;
+  width: 100%;
+  height: 45px;
+  background-color: rgb(200, 200, 200, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.main .containerSubtitle h2 {
+  color: white;
+  text-align: center;
+  font-size: 34px;
+  font-family: "MedievalSharp", serif;
+}
+
+.main .containerSelection {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.hero {
+  cursor: pointer;
+}
+
+.hero img {
+  width: 350px;
+  height: 400px;
+  border-radius: 3%;
+}
+
+.hero img:hover {
+  filter: contrast(0.9);
+}
+
+.hero a {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-shadow: 1px 1px 1px white;
+  gap: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero0 a {
+  color: rgb(49, 14, 8);
+}
+
+.hero1 a {
+  color: rgb(17, 124, 124);
+}
+
+.hero2 a {
+  color: rgb(35, 36, 36);
+}
+
+.hero3 a {
+  color: rgb(226, 223, 223);
+}
+
+.hero4 a {
+  color: rgb(15, 87, 57);
+}
+
+.hero5 a {
+  color: rgb(31, 72, 119);
+}
+
+.footer {
+  margin-top: 60px;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .header .containerSlide {
+    height: 400px;
+  }
+
+  .main .containerSelection {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .header .containerTitle h1,
+  .main .containerSubtitle h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero,
+  .hero img {
+    width: 100%;
+  }
+}

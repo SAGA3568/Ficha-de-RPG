@@ -2,7 +2,7 @@ body {
   background-image: url(../img/fundo-barbaro.jpg);
 }
 
-.container-title h1,
+.containerTitle h1,
 legend {
   color: rgb(61, 28, 28);
 }
