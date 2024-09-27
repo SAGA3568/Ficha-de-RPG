@@ -7,9 +7,6 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
 
-/**
- * @extends ServiceEntityRepository<Ficha>
- */
 class FichaRepository extends ServiceEntityRepository
 {
     private EntityManagerInterface $entityManager;
@@ -22,6 +19,7 @@ class FichaRepository extends ServiceEntityRepository
     }
 
     /**
+     * @param Ficha $ficha
      * @return void
      */
     public function save(Ficha $ficha): void
@@ -31,6 +29,7 @@ class FichaRepository extends ServiceEntityRepository
     }
 
     /**
+     * @param Ficha $ficha
      * @return void
      */
     public function delete(Ficha $ficha): void

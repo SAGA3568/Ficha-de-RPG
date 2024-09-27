@@ -2,8 +2,6 @@
 
 namespace App\DTO;
 
-use App\Dto\InputInterface;
-
 class UpdateFichaInput extends InputInterface
 {
     public string $name;

@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\DTO\UpdateFichaInput;
 use App\Entity\Ficha;
-use App\Helper\ObjectHydrator;
+use App\Helper\ObjectHydrate;
 use App\Repository\FichaRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Attribute\AsController;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Encoder\jsonencoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\SerializerInterface;
@@ -27,26 +27,28 @@ class FichaController extends AbstractController
     {
         $this->fichaRepository = $fichaRepository;
         $this->serializer = new Serializer(
-            normalizers: [ObjectNormalizer],
-            encoders: [JsonEncoder]
+            normalizers: [new ObjectNormalizer],
+            encoders: [new JsonEncoder]
         );
     }
 
-    public function __invoke(Request $request): Ficha
+    public function __invoke(Request $request): object
     {
-        $input = ObjectHydrator::hydrate(
+        return ObjectHydrate::hydrate(
             json_decode($request->getContent(), true),
             new UpdateFichaInput()
         );
     }
 
-    #[Route("/new", name: "index", methods: ["POST"])]
+    #[Route("/new", name: "ficha_new", methods: ["POST"])]
     public function new(Request $request): Response
     {
-        $ficha = ObjectHydrator::hydrate(
+        $ficha = ObjectHydrate::hydrate(
             json_decode($request->getContent(), true),
             new Ficha()
         );
+
+        $this->fichaRepository->save($ficha);
 
         return new Response(
             "Ficha created successfully",
@@ -54,7 +56,7 @@ class FichaController extends AbstractController
         );
     }
 
-    #[Route("/find/{id}", name: "index", methods: ["GET"])]
+    #[Route("/find/{id}", name: "ficha_find", methods: ["GET"])]
     public function findById(Request $request): Response
     {
         $id = $request->get("id");
@@ -68,7 +70,7 @@ class FichaController extends AbstractController
         return new JsonResponse($ficha->toArray());
     }
 
-    #[Route("/update/{id}", name: "index", methods: ["PUT"])]
+    #[Route("/update/{id}", name: "ficha_update", methods: ["PUT"])]
     public function update(Request $request): Response
     {
         $id = $request->get("id");
@@ -80,7 +82,7 @@ class FichaController extends AbstractController
             );
         }
 
-        $ficha = ObjectHydrator::hydrate(
+        $ficha = ObjectHydrate::hydrate(
             json_decode($request->getContent(), true),
             $ficha
         );
@@ -90,7 +92,8 @@ class FichaController extends AbstractController
         return new Response("Ficha updated successfully", Response::HTTP_OK);
     }
 
-    public function delete(Request $request, int $id): Response
+    #[Route("/delete/{id}", name: "ficha_delete", methods: ["DELETE"])]
+    public function delete(int $id): Response
     {
         $ficha = $this->fichaRepository->find($id);
         if (!$ficha) {
@@ -103,6 +106,7 @@ class FichaController extends AbstractController
         return new Response("Ficha deleted successfully", Response::HTTP_OK);
     }
 
+    #[Route("/all", name: "ficha_all", methods: ["GET"])]
     public function findAll(): Response
     {
         $fichas = $this->fichaRepository->findAll();

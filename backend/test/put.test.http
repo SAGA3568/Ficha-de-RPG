@@ -1,0 +1,25 @@
+PUT http://localhost:8001/ficha/update/1
+Content-Type: application/json
+
+{
+"name": "Gustavo M.",
+"type": "Warrior",
+"genre": "Male",
+"history": "A brave warrior from the north.",
+"age": 30,
+"height": 1.85,
+"strength": 80,
+"intelligence": 70,
+"resistence": 75,
+"charisma": 60,
+"reflexes": 65,
+"dexterity": 70,
+"hitPoint": 100,
+"fury": 50,
+"magic": 40,
+"faith": 30,
+"stamina": 90,
+"bleeding": false,
+"poisoning": false,
+"inventory": ["sword", "shield", "potion"]
+}
