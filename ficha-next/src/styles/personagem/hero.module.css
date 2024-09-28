@@ -16,6 +16,10 @@
   max-width: 1200px;
 }
 
+.container select {
+  border-radius: 6px;
+}
+
 .container form input {
   background: none;
   border: 0;

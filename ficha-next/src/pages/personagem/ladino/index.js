@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 import styles from "../../../styles/personagem/hero.module.css";
-import stylesBarbaro from "../../../styles/personagem/barbaro.module.css";
+import stylesLadino from "../../../styles/personagem/ladino.module.css";
 import { createData } from "@/pages/api/hello";
 import { useRouter } from "next/router";
 
-export default function Barbaro() {
-  const [currentImage, setCurrentImage] = useState("/img/Barbaro.jpeg");
+export default function Ladino() {
+  const [currentImage, setCurrentImage] = useState("/img/Ladino.jpeg");
   const [field, setField] = useState({});
   const router = useRouter();
 
   const images = [
-    "/img/Barbaro.jpeg",
-    "/img/Raças Barbaro/Homem.jpeg",
-    "/img/Raças Barbaro/Mulher.jpeg",
-    "/img/Raças Barbaro/Orc macho.jpeg",
-    "/img/Raças Barbaro/Orc femea.jpeg",
-    "/img/Raças Barbaro/Anão.jpeg",
-    "/img/Raças Barbaro/Anã.jpeg",
-    "/img/Raças Barbaro/Centauro.jpeg",
-    "/img/Raças Barbaro/Centaura.jpeg",
+    "/img/Ladino.jpeg",
+    "/img/Tipo Ladino/Homem.jpeg",
+    "/img/Tipo Ladino/Mulher.jpeg",
+    "/img/Tipo Ladino/Elfo.jpeg",
+    "/img/Tipo Ladino/Elfa.jpeg",
   ];
 
   const changeImageByIndex = (indexImage) => {
@@ -29,7 +25,7 @@ export default function Barbaro() {
     const payload = {
       ...field,
       image: currentImage,
-      type: "Barbaro",
+      type: "Ladino",
     };
 
     const response = createData(payload);
@@ -40,24 +36,24 @@ export default function Barbaro() {
   };
 
   return (
-    <div className={`${styles.wrapper} ${stylesBarbaro.wrapper}`}>
-      <div className={`${styles.container} ${stylesBarbaro.container}`}>
+    <div className={`${styles.wrapper} ${stylesLadino.wrapper}`}>
+      <div className={`${styles.container} ${stylesLadino.container}`}>
         <header>
           <div
-            className={`${styles.containerTitle} ${stylesBarbaro.containerTitle}`}
+            className={`${styles.containerTitle} ${stylesLadino.containerTitle}`}
           >
-            <h1>Barbaro</h1>
+            <h1>Ladino</h1>
           </div>
         </header>
 
         <main>
           <div className={styles.profile} id="profile">
-            <img src={currentImage} id="Barbaro" />
+            <img src={currentImage} id="Ladino" />
 
             <div className={`${styles.otherProfile}`} id="other-profile">
               <div className={`${styles.imageProfile}`}>
                 <img
-                  src="/img/Raças Barbaro/Homem.jpeg"
+                  src="/img/Tipo Ladino/Homem.jpeg"
                   onClick={() => {
                     changeImageByIndex(1);
                   }}
@@ -72,7 +68,7 @@ export default function Barbaro() {
               </div>
               <div className={`${styles.imageProfile}`}>
                 <img
-                  src="/img/Raças Barbaro/Mulher.jpeg"
+                  src="/img/Tipo Ladino/Mulher.jpeg"
                   onClick={() => {
                     changeImageByIndex(2);
                   }}
@@ -87,14 +83,14 @@ export default function Barbaro() {
               </div>
               <div className={`${styles.imageProfile}`}>
                 <img
-                  src="/img/Raças Barbaro/Orc macho.jpeg"
+                  src="/img/Tipo Ladino/Elfo.jpeg"
                   onClick={() => {
                     changeImageByIndex(3);
                   }}
                 />
                 <input
                   type="button"
-                  value="Orc Macho"
+                  value="Elfo"
                   onClick={() => {
                     changeImageByIndex(3);
                   }}
@@ -102,76 +98,16 @@ export default function Barbaro() {
               </div>
               <div className={`${styles.imageProfile}`}>
                 <img
-                  src="/img/Raças Barbaro/Orc femea.jpeg"
+                  src="/img/Tipo Ladino/Elfa.jpeg"
                   onClick={() => {
                     changeImageByIndex(4);
                   }}
                 />
                 <input
                   type="button"
-                  value="Orc Femea"
+                  value="Elfa"
                   onClick={() => {
                     changeImageByIndex(4);
-                  }}
-                />
-              </div>
-              <div className={`${styles.imageProfile}`}>
-                <img
-                  src="/img/Raças Barbaro/Anão.jpeg"
-                  onClick={() => {
-                    changeImageByIndex(5);
-                  }}
-                />
-                <input
-                  type="button"
-                  value="Anão"
-                  onClick={() => {
-                    changeImageByIndex(5);
-                  }}
-                />
-              </div>
-              <div className={`${styles.imageProfile}`}>
-                <img
-                  src="/img/Raças Barbaro/Anã.jpeg"
-                  onClick={() => {
-                    changeImageByIndex(6);
-                  }}
-                />
-                <input
-                  type="button"
-                  value="Anã"
-                  onClick={() => {
-                    changeImageByIndex(6);
-                  }}
-                />
-              </div>
-              <div className={`${styles.imageProfile}`}>
-                <img
-                  src="/img/Raças Barbaro/Centauro.jpeg"
-                  onClick={() => {
-                    changeImageByIndex(7);
-                  }}
-                />
-                <input
-                  type="button"
-                  value="Centauro"
-                  onClick={() => {
-                    changeImageByIndex(7);
-                  }}
-                />
-              </div>
-              <div className={`${styles.imageProfile}`}>
-                <img
-                  src="/img/Raças Barbaro/Centaura.jpeg"
-                  onClick={() => {
-                    changeImageByIndex(8);
-                  }}
-                />
-                <input
-                  type="button"
-                  value="Centaura"
-                  onClick={() => {
-                    changeImageByIndex(8);
                   }}
                 />
               </div>
@@ -243,37 +179,37 @@ export default function Barbaro() {
               <fieldset>
                 <legend>Atributos</legend>
                 <div
-                  className={`${styles.attributes} ${stylesBarbaro.attributes}`}
+                  className={`${styles.attributes} ${stylesLadino.attributes}`}
                 >
                   <label for="Forca">Força</label>
                   <input type="number" name="for" id="for" />
                 </div>
                 <div
-                  className={`${styles.attributes} ${stylesBarbaro.attributes}`}
+                  className={`${styles.attributes} ${stylesLadino.attributes}`}
                 >
                   <label for="inteligencia">Inteligência</label>
                   <input type="number" name="int" id="int" />
                 </div>
                 <div
-                  className={`${styles.attributes} ${stylesBarbaro.attributes}`}
+                  className={`${styles.attributes} ${stylesLadino.attributes}`}
                 >
                   <label for="resistencia">Resistência</label>
                   <input type="number" name="res" id="res" />
                 </div>
                 <div
-                  className={`${styles.attributes} ${stylesBarbaro.attributes}`}
+                  className={`${styles.attributes} ${stylesLadino.attributes}`}
                 >
                   <label for="carisma">Carisma</label>
                   <input type="number" name="cas" id="cas" />
                 </div>
                 <div
-                  className={`${styles.attributes} ${stylesBarbaro.attributes}`}
+                  className={`${styles.attributes} ${stylesLadino.attributes}`}
                 >
                   <label for="reflexos">Reflexos</label>
                   <input type="number" name="ref" id="ref" />
                 </div>
                 <div
-                  className={`${styles.attributes} ${stylesBarbaro.attributes}`}
+                  className={`${styles.attributes} ${stylesLadino.attributes}`}
                 >
                   <label for="destreza">Destreza</label>
                   <input type="number" name="des" id="des" />
@@ -297,13 +233,13 @@ export default function Barbaro() {
             <div id="status" className={`${styles.status}`}>
               <fieldset>
                 <legend>Status</legend>
-                <div className={`${styles.life}`}>
+                <div className={`${styles.life} ${stylesLadino.life}`}>
                   <label for="hp">PV</label>
                   <input type="number" name="hp" id="hp" />
                 </div>
-                <div className={`${styles.fury}`}>
-                  <label for="furia">Furia</label>
-                  <input type="number" name="fu" id="fu" />
+                <div className={`${styles.sta} ${stylesLadino.sta}`}>
+                  <label for="sta">Esta</label>
+                  <input type="number" name="sta" id="sta" />
                 </div>
                 <div className={`${styles.injury}`}>
                   <label for="sagramento">Sangramento</label>

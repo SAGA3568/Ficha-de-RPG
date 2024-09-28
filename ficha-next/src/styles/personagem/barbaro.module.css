@@ -7,6 +7,11 @@
   color: rgb(61, 28, 28);
 }
 
-.attributes label {
+.attributes label,
+.container select {
   background-color: rgb(61, 28, 28);
+}
+
+.container select {
+  color: white;
 }
