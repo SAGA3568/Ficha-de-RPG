@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  max-width: 100vw;
+  width: 100%;
+}
+
+.containerTitle h1 {
+  font-family: "MedievalSharp", serif;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(61, 28, 28);
+}
