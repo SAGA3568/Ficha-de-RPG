@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+::root {
+    font-family: "Fredoka", sans-serif;
+    --color-primary: #f9f9f9;
+    --color-secondary: #f9f9f9;
+    --color-tertiary: #f9f9f9;
+    --color-quaternary: #f9f9f9;
+    --color-quinary: #f9f9f9;
+    --color-senary: #f9f9f9;
+    --color-septenary: #f9f9f9;
+    --color-octonary: #f9f9f9;
+    --color-nonary: #f9f9f9;
+    --color-denary: #f9f9f9;
+    --color-elevenary: #f9f9f9;
+    --color-twelveary: #f9f9f9;
+    --color-thirteenary: #f9f9f9;
+    --color-fourteenary: #f9f9f9;
+    --color-fifteenary: #f9f9f9;
+    --color-sixteenary: #f9f9f9;
+    --color-seventeenary: #f9f9f9;
+    --color-eighteenary: #f9f9f9;
+    --color-nineteenary: #f9f9f9;
+    --color-twentyary: #f9f9f9;
+    --color-twentyoneary: #f9f9f9;
+    --color-twentytwoary: #f9f9f9;
+    --color-twentythreeary: #f9f9f9;
+    --color-twentyfourary: #f9f9f9;
+    --color-twentyfiveary: #f9f9f9;
+    --color-twentysixary: #f9f9f9;
+    --color-twentysevenary: #f9f9f9;
+    --color-twentyeightary: #f9f9f9;
+    --color-twentynineary: #f9f9f9;
+    --color-thirtyary: #f9f9f9;
+    --color-thirtyoneary: #f9f9f9;
+    --color-thirtytwoary: #f9f9f9;
+}

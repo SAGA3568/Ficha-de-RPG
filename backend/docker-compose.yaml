@@ -1,0 +1,12 @@
+services:
+  backend-postgres:
+    image: postgres:13
+    container_name: backend-postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: laravel
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data

@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for backend-ficha-rpg-pedro on 2024-09-29T13:09:56-03:00
+# fly.toml app configuration file generated for backend-aula-pedro on 2024-09-29T18:10:17-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'backend-ficha-rpg-pedro'
+app = 'backend-aula-pedro'
 primary_region = 'gru'
 console_command = 'php /var/www/html/artisan tinker'
 
@@ -29,6 +29,6 @@ console_command = 'php /var/www/html/artisan tinker'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
+  memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
