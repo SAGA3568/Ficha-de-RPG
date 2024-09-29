@@ -41,6 +41,16 @@ export default function Home() {
 
       <div className={styles.wrapper}>
         <div className={styles.container}>
+          <nav>
+            <ul>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/personagem">Personagens Cadastrados</Link>
+              </li>
+            </ul>
+          </nav>
           <header className={styles.header}>
             <div className={styles.containerTitle}>
               <h1>Caverna Do Dragão</h1>
@@ -80,18 +90,6 @@ export default function Home() {
                   <span>Paladino</span>
                 </Link>
               </div>
-              {/* <div className="hero hero4">
-            <Link href="#">
-              <img src="img/Druida.jpeg" height="" />
-              <span>Druida</span>
-            </Link>
-          </div>
-          <div className="hero hero5">
-            <Link href="#">
-              <img src="img/Bardo.jpeg" height="" />
-              <span> Bardo </span>
-            </Link>
-          </div>  */}
             </div>
           </main>
 

@@ -1,14 +1,40 @@
 import React, { useState } from "react";
 import styles from "../../../styles/personagem/hero.module.css";
 import stylesPaladino from "../../../styles/personagem/paladino.module.css";
-import { createData } from "@/pages/api/hello";
+import { createData } from "@/pages/api/characters";
 import { useRouter } from "next/router";
 
 export default function Paladino() {
   const [currentImage, setCurrentImage] = useState(
     "/img/Paladino/icon_paladino.jpeg"
   );
-  const [field, setField] = useState({});
+  const [field, setField] = useState({
+    name: "",
+    genre: "M",
+    history: "",
+    age: null,
+    height: null,
+    breed: "H",
+    strength: null,
+    intelligence: null,
+    resistance: null,
+    charisma: null,
+    reflexes: null,
+    dexterity: null,
+    hit_point: null,
+    fury: null,
+    magic: null,
+    faith: null,
+    stamina: null,
+    bleeding: false,
+    poisoning: false,
+    item_1: "",
+    effect_1: "",
+    item_2: "",
+    effect_2: "",
+    item_3: "",
+    effect_3: "",
+  });
   const router = useRouter();
 
   const images = [
@@ -28,7 +54,7 @@ export default function Paladino() {
       type: "Paladino",
     };
 
-    const response = createData(payload);
+    const response = await createData(payload);
 
     if (response) {
       router.back();
@@ -84,10 +110,9 @@ export default function Paladino() {
             </div>
           </div>
           <form
-            action="Guerriero"
-            method="get"
             className={`${styles.containerForm}`}
             id="container-form"
+            onSubmit={onSubmit}
           >
             <div className={`${styles.character}`}>
               <fieldset>
@@ -99,6 +124,9 @@ export default function Paladino() {
                     type="text"
                     name="nome"
                     className={`${styles.name}`}
+                    onChange={(e) => {
+                      setField({ ...field, name: e.target.value });
+                    }}
                     id="nome"
                   />
                 </div>
@@ -109,10 +137,20 @@ export default function Paladino() {
                   name="age"
                   className={`${styles.age}`}
                   id="age"
+                  onChange={(e) => {
+                    setField({ ...field, age: e.target.value });
+                  }}
                 />
 
                 <label for="raca">Raça</label>
-                <select name="raca" id="raca" className={`${styles.breed}`}>
+                <select
+                  name="raca"
+                  id="raca"
+                  onChange={(e) => {
+                    setField({ ...field, breed: e.target.value });
+                  }}
+                  className={`${styles.breed}`}
+                >
                   <option value="H">Humano</option>
                   <option value="O">Orc</option>
                   <option value="A">Anão</option>
@@ -125,10 +163,20 @@ export default function Paladino() {
                   name="height"
                   id="height"
                   className={`${styles.height}`}
+                  onChange={(e) => {
+                    setField({ ...field, height: e.target.value });
+                  }}
                 />
 
                 <label for="genre">Sexo</label>
-                <select name="genre" id="genre" className={`${styles.genre}`}>
+                <select
+                  name="genre"
+                  id="genre"
+                  onChange={(e) => {
+                    setField({ ...field, genre: e.target.value });
+                  }}
+                  className={`${styles.genre}`}
+                >
                   <option value="M">Masculino</option>
                   <option value="F">Feminino</option>
                   <option value="H">Metamorfo</option>
@@ -139,6 +187,9 @@ export default function Paladino() {
                   name="weight"
                   id="weight"
                   className={`${styles.weight}`}
+                  onChange={(e) => {
+                    setField({ ...field, weight: e.target.value });
+                  }}
                 />
               </fieldset>
             </div>
@@ -152,37 +203,79 @@ export default function Paladino() {
                   className={`${styles.attributes} ${stylesPaladino.attributes}`}
                 >
                   <label for="Forca">Força</label>
-                  <input type="number" name="for" id="for" />
+                  <input
+                    type="number"
+                    name="for"
+                    id="for"
+                    onChange={(e) => {
+                      setField({ ...field, strength: e.target.value });
+                    }}
+                  />
                 </div>
                 <div
                   className={`${styles.attributes} ${stylesPaladino.attributes}`}
                 >
                   <label for="inteligencia">Inteligência</label>
-                  <input type="number" name="int" id="int" />
+                  <input
+                    type="number"
+                    name="int"
+                    id="int"
+                    onChange={(e) => {
+                      setField({ ...field, intelligence: e.target.value });
+                    }}
+                  />
                 </div>
                 <div
                   className={`${styles.attributes} ${stylesPaladino.attributes}`}
                 >
                   <label for="resistencia">Resistência</label>
-                  <input type="number" name="res" id="res" />
+                  <input
+                    type="number"
+                    name="res"
+                    id="res"
+                    onChange={(e) => {
+                      setField({ ...field, resistance: e.target.value });
+                    }}
+                  />
                 </div>
                 <div
                   className={`${styles.attributes} ${stylesPaladino.attributes}`}
                 >
                   <label for="carisma">Carisma</label>
-                  <input type="number" name="cas" id="cas" />
+                  <input
+                    type="number"
+                    name="cas"
+                    id="cas"
+                    onChange={(e) => {
+                      setField({ ...field, charisma: e.target.value });
+                    }}
+                  />
                 </div>
                 <div
                   className={`${styles.attributes} ${stylesPaladino.attributes}`}
                 >
                   <label for="reflexos">Reflexos</label>
-                  <input type="number" name="ref" id="ref" />
+                  <input
+                    type="number"
+                    name="ref"
+                    id="ref"
+                    onChange={(e) => {
+                      setField({ ...field, reflexes: e.target.value });
+                    }}
+                  />
                 </div>
                 <div
                   className={`${styles.attributes} ${stylesPaladino.attributes}`}
                 >
                   <label for="destreza">Destreza</label>
-                  <input type="number" name="des" id="des" />
+                  <input
+                    type="number"
+                    name="des"
+                    id="des"
+                    onChange={(e) => {
+                      setField({ ...field, dexterity: e.target.value });
+                    }}
+                  />
                 </div>
               </fieldset>
             </div>
@@ -195,7 +288,13 @@ export default function Paladino() {
                 <legend>História do Personagem</legend>
                 <div className={`${styles.hist}`}>
                   <label for="his"></label>
-                  <textarea name="his" id="his"></textarea>
+                  <textarea
+                    name="his"
+                    id="his"
+                    onChange={(e) => {
+                      setField({ ...field, history: e.target.value });
+                    }}
+                  ></textarea>
                 </div>
               </fieldset>
             </div>
@@ -203,21 +302,49 @@ export default function Paladino() {
             <div id="status" className={`${styles.status}`}>
               <fieldset>
                 <legend>Status</legend>
-                <div className={`${styles.life} ${stylesPaladino.life}`}>
+                <div className={`${styles.life}`}>
                   <label for="hp">PV</label>
-                  <input type="number" name="hp" id="hp" />
+                  <input
+                    type="number"
+                    name="hp"
+                    id="hp"
+                    onChange={(e) => {
+                      setField({ ...field, hit_point: e.target.value });
+                    }}
+                  />
                 </div>
-                <div className={`${styles.fe} ${stylesPaladino.fe}`}>
-                  <label id="faith">FÉ</label>
-                  <input type="number" name="fe" id="Fe" />
+                <div className={`${styles.fury}`}>
+                  <label for="furia">Furia</label>
+                  <input
+                    type="number"
+                    name="fu"
+                    id="fu"
+                    onChange={(e) => {
+                      setField({ ...field, fury: e.target.value });
+                    }}
+                  />
                 </div>
                 <div className={`${styles.injury}`}>
                   <label for="sagramento">Sangramento</label>
-                  <input type="checkbox" name="sague" id="sague" />
+                  <input
+                    type="checkbox"
+                    name="sague"
+                    id="sague"
+                    onChange={(e) => {
+                      setField({ ...field, bleeding: e.target.checked });
+                    }}
+                  />
                 </div>
                 <div className={`${styles.venom}`}>
                   <label for="poison">Envenenado</label>
-                  <input type="checkbox" name="poison" id="poison" />
+                  <input
+                    type="checkbox"
+                    name="poison"
+                    id="poison"
+                    onChange={(e) => {
+                      setField({ ...field, poisoning: e.target.checked });
+                    }}
+                  />
                 </div>
               </fieldset>
             </div>
@@ -227,61 +354,98 @@ export default function Paladino() {
                 <legend>Equipamentos</legend>
                 <div className={`${styles.armor}`}>
                   <label for="equip">Item</label>
-                  <input type="text" name="arma1" id="arma1" />
+                  <input
+                    type="text"
+                    name="arma1"
+                    id="arma1"
+                    onChange={(e) => {
+                      setField({ ...field, item_1: e.target.value });
+                    }}
+                  />
                 </div>
                 <div className={`${styles.efeito}`}>
                   <label for="ele">Efeito</label>
-                  <select name="ele" id="ele">
-                    <option value="n">Nenhum</option>
-                    <option value="F">Fogo</option>
-                    <option value="A">Água</option>
-                    <option value="T">Terra</option>
-                    <option value="V">Veneno</option>
-                    <option value="S">Sagramento</option>
-                    <option value="M">Medo</option>
-                    <option value="C">Cura</option>
+                  <select
+                    name="ele"
+                    id="ele"
+                    onChange={(e) => {
+                      setField({ ...field, effect_1: e.target.value });
+                    }}
+                  >
+                    <option value="Nenhum efeito">Nenhum</option>
+                    <option value="Fogo">Fogo</option>
+                    <option value="Água">Água</option>
+                    <option value="Terra">Terra</option>
+                    <option value="Veneno">Veneno</option>
+                    <option value="Sangramento">Sangramento</option>
+                    <option value="Medo">Medo</option>
+                    <option value="Cura">Cura</option>
                   </select>
                 </div>
                 <div className={`${styles.armor}`}>
                   <label for="equip">Item</label>
-                  <input type="text" name="arma1" id="arma1" />
+                  <input
+                    type="text"
+                    name="arma1"
+                    id="arma1"
+                    onChange={(e) => {
+                      setField({ ...field, item_2: e.target.value });
+                    }}
+                  />
                 </div>
                 <div className={`${styles.efeito}`}>
                   <label for="ele">Efeito</label>
-                  <select name="ele" id="ele">
-                    <option value="n">Nenhum</option>
-                    <option value="F">Fogo</option>
-                    <option value="A">Água</option>
-                    <option value="T">Terra</option>
-                    <option value="V">Veneno</option>
-                    <option value="S">Sagramento</option>
-                    <option value="M">Medo</option>
-                    <option value="C">Cura</option>
+                  <select
+                    name="ele"
+                    id="ele"
+                    onChange={(e) => {
+                      setField({ ...field, effect_2: e.target.value });
+                    }}
+                  >
+                    <option value="Nenhum efeito">Nenhum</option>
+                    <option value="Fogo">Fogo</option>
+                    <option value="Água">Água</option>
+                    <option value="Terra">Terra</option>
+                    <option value="Veneno">Veneno</option>
+                    <option value="Sangramento">Sangramento</option>
+                    <option value="Medo">Medo</option>
+                    <option value="Cura">Cura</option>
                   </select>
                 </div>
                 <div className={`${styles.armor}`}>
                   <label for="equip">Item</label>
-                  <input type="text" name="arma1" id="arma1" />
+                  <input
+                    type="text"
+                    name="arma1"
+                    id="arma1"
+                    onChange={(e) => {
+                      setField({ ...field, item_3: e.target.value });
+                    }}
+                  />
                 </div>
                 <div className={`${styles.efeito}`}>
                   <label for="ele">Efeito</label>
-                  <select name="ele" id="ele">
-                    <option value="n">Nenhum</option>
-                    <option value="F">Fogo</option>
-                    <option value="A">Água</option>
-                    <option value="T">Terra</option>
-                    <option value="V">Veneno</option>
-                    <option value="S">Sagramento</option>
-                    <option value="M">Medo</option>
-                    <option value="C">Cura</option>
+                  <select
+                    name="ele"
+                    id="ele"
+                    onChange={(e) => {
+                      setField({ ...field, effect_3: e.target.value });
+                    }}
+                  >
+                    <option value="Nenhum efeito">Nenhum</option>
+                    <option value="Fogo">Fogo</option>
+                    <option value="Água">Água</option>
+                    <option value="Terra">Terra</option>
+                    <option value="Veneno">Veneno</option>
+                    <option value="Sangramento">Sangramento</option>
+                    <option value="Medo">Medo</option>
+                    <option value="Cura">Cura</option>
                   </select>
                 </div>
               </fieldset>
             </div>
 
-            <button type="submit" onclick="exito()">
-              Confirmar
-            </button>
+            <button type="submit">Confirmar</button>
           </form>
         </main>
       </div>

@@ -9,13 +9,25 @@
 
   display: flex;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem 4rem 2rem;
   font-family: "Raleway", sans-serif;
 }
 
 .container {
   max-width: 1200px;
   width: 100%;
+}
+
+.wrapper nav ul {
+  display: flex;
+  float: right;
+  padding: 2rem;
+
+  gap: 1rem;
+}
+
+.wrapper nav ul li a {
+  color: #fff;
 }
 
 .header,
