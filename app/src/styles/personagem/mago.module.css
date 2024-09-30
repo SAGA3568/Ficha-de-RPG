@@ -1,0 +1,27 @@
+.wrapper {
+  background-image: url(/img/back-mago.jpg);
+}
+
+.containerTitle h1 {
+  color: black;
+}
+
+.profile {
+  background-color: rgb(200, 200, 200, 0.1);
+}
+
+.container legend,
+.container fieldset label {
+  color: rgb(17, 124, 124);
+}
+
+.attributes label,
+.container select {
+  background-color: rgb(17, 124, 124);
+  color: white !important;
+}
+
+.magic label {
+  background-color: rgb(38, 35, 224);
+  color: white !important;
+}

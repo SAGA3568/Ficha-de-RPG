@@ -1,5 +1,5 @@
 .wrapper {
-  background-image: url(/app/img/Dungeon.jpg);
+  background-image: url(/img/Dungeon.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -29,7 +29,7 @@
 .header .containerTitle {
   width: 100%;
   height: 70px;
-  background-image: url(/app/img/ap.jpg);
+  background-image: url(/img/ap.jpg);
   margin-bottom: 5px;
   border-radius: 3%;
   display: flex;
